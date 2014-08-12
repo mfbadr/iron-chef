@@ -6,7 +6,7 @@
 }
 
 body{
-  background-color: #0074D9;
+  background-color: #514E5C;
   background-size: cover;
   padding: 0px;
   margin: 0px;
@@ -48,4 +48,9 @@ body h2{
 
 #recipe img{
   width: 100%;
+}
+
+#recipetext{
+  margin: 0px;
+  padding: 5px;
 }
