@@ -4,23 +4,15 @@
 [![Coverage Status](https://coveralls.io/repos/mfbadr/iron-chef/badge.png)](https://coveralls.io/r/mfbadr/iron-chef)
 
 ### About
-write a description about your project
+Recipe database using AJAX and jquery
 
 ### Models
 ```
-Model 1
-prop-a
-prop-b
-.classMethod-c
-#instanceMethod-d
+Recipe
+.all
 ```
 
 ```
-Model 2
-prop-e
-prop-f
-.classMethod-g
-#instanceMethod-h
 ```
 
 ### Features
@@ -35,7 +27,7 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [Mikey Badr](https://github.com/mfbadr)
 
 ### License
 [MIT](LICENSE)
