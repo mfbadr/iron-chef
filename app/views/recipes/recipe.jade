@@ -1,0 +1,8 @@
+#recipe
+  img(src='#{recipe.photo}')
+  #recipetext
+    h3= recipe.name
+    ul
+      each ingredient in recipe.ingredients
+        li= ingredient
+    p #{recipe.directions}
