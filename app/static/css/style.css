@@ -26,15 +26,26 @@ body h2{
   font-size: 2em;
 }
 
+#recipes > *{
+  vertical-align: top;
+}
+
 #recipe{
+  position: relative;
+  top: 0px;
   display: inline-block;
+  height: auto;
   max-width: 25%;
   border: 1px solid black;
   margin: 5px;
   background-color: #ccc;
-  padding: 15px;
+  padding: 0px;
+}
+
+#recipe h3{
+  font-size: 20px;
 }
 
 #recipe img{
-  width: 50%;
+  width: 100%;
 }
