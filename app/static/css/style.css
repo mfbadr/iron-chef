@@ -12,6 +12,10 @@ body{
   margin: 0px;
 }
 
+.wrapper{
+  padding: 5px;
+}
+
 body h2{
   font-size: 1.5em;
 }
@@ -20,7 +24,9 @@ body h2{
   background-color: #3D9970;
   margin: 0;
 }
-
+#formhide{
+  display:block;
+}
 #header h1{
   margin: 0 auto;
   font-size: 2em;
@@ -35,11 +41,13 @@ body h2{
   top: 0px;
   display: inline-block;
   height: auto;
-  max-width: 25%;
-  border: 1px solid black;
+  width: 200px;
+  border: 2px solid black;
   margin: 5px;
   background-color: #ccc;
   padding: 0px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 #recipe h3{
@@ -48,9 +56,23 @@ body h2{
 
 #recipe img{
   width: 100%;
+  max-height: 200px;
 }
 
 #recipetext{
   margin: 0px;
   padding: 5px;
+}
+
+.form form > *{
+  margin: 5px;
+  display: block;
+  vertical-align: top;
+}
+
+.form{
+  background-color: #ccc;
+  padding: 5px;
+  border: 2px solid black;
+  display: inline-block;
 }

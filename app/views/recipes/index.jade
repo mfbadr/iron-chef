@@ -1,16 +1,19 @@
 extends ../shared/template
 block content
-  h2 Recipe Index
-  #recipes
-    each recipe in recipes
-      #recipe
-        img(src='#{recipe.photo}')
-        #recipetext
-          h3= recipe.name
-          ul
-            each ingredient in recipe.ingredients
-              li= ingredient
-          p #{recipe.directions}
+  .wrapper
+    #controls
+      button#formhide Hide/Show Form
+      .form
+        label Add A New Recipe
+        form(method='post', action='/recipes')
+          input(name='name', type='text', placeholder='Name', autofocus=true)
+          input(name='photo', type='text', placeholder='Photo URL')
+          input(name='ingredients', type='text', placeholder='Ingredients')
+          textarea(name='directions', placeholder='Directions')
+          button Add Recipe!
+    h2 Recipe Index
+    #recipes
+      each recipe in recipes
+        include recipe
   block scripts
-  script(src='/js/user/home.js')
 
