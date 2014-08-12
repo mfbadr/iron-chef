@@ -1,0 +1,15 @@
+extends ../shared/template
+block content
+  h2 Recipe Index
+  #recipes
+    each recipe in recipes
+      #recipe
+        img(src='#{recipe.photo}')
+        h3= recipe.name
+        ul
+          each ingredient in recipe.ingredients
+            li= ingredient
+        p #{recipe.directions}
+block scripts
+  script(src='/js/user/home.js')
+

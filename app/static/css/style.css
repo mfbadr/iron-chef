@@ -6,7 +6,35 @@
 }
 
 body{
-  background-image: url(/img/node.png);
+  background-color: #0074D9;
   background-size: cover;
+  padding: 0px;
+  margin: 0px;
 }
 
+body h2{
+  font-size: 1.5em;
+}
+
+#header{
+  background-color: #3D9970;
+  margin: 0;
+}
+
+#header h1{
+  margin: 0 auto;
+  font-size: 2em;
+}
+
+#recipe{
+  display: inline-block;
+  max-width: 25%;
+  border: 1px solid black;
+  margin: 5px;
+  background-color: #ccc;
+  padding: 15px;
+}
+
+#recipe img{
+  width: 50%;
+}

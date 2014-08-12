@@ -1,7 +1,7 @@
 ## name of project
 ### Code Badges
-build status icon
-coverage status icon
+[![Build Status](https://travis-ci.org/mfbadr/iron-chef.svg)](https://travis-ci.org/mfbadr/iron-chef)
+[![Coverage Status](https://coveralls.io/repos/mfbadr/iron-chef/badge.png)](https://coveralls.io/r/mfbadr/iron-chef)
 
 ### About
 write a description about your project
