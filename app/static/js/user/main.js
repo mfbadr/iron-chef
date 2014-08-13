@@ -11,14 +11,16 @@
 
     $('#categories li').click(filterCategory);
 
-    $('#showAll').click(function(){$('.recipe').fadeIn()});
+    $('#showAll').click(function(){
+      $('.recipe').show();
+    });
   });
 
   function filterCategory(e){
     //debugger;
     var category = $(this).text();
-    $('.recipe .category:not(:contains('+category+'))').closest('.recipe').fadeOut()
-    $('.recipe .category:contains('+category+')').closest('.recipe').fadeIn()
+    $('.recipe .category:not(:contains('+category+'))').closest('.recipe').fadeOut();
+    $('.recipe .category:contains('+category+')').closest('.recipe').fadeIn();
     e.preventDefault();
   }
   function delRecipe(){
