@@ -1,3 +1,4 @@
+
 'use strict';
 
 var morgan         = require('morgan'),
@@ -13,6 +14,7 @@ module.exports = function(app, express){
 
   app.get('/', recipes.index);
 
+  app.delete('/recipes/:id', recipes.delete);
   app.post('/recipes', recipes.create);
   console.log('Routes Loaded');
 };

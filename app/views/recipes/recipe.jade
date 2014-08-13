@@ -1,7 +1,9 @@
-#recipe
+.recipe(data-recipe-id=recipe._id.toString())
   img(src='#{recipe.photo}')
+  button.delete X
   #recipetext
     h3= recipe.name
+    h4.category= recipe.category
     ul
       each ingredient in recipe.ingredients
         li= ingredient

@@ -2,7 +2,7 @@ extends ../shared/template
 block content
   .wrapper
     #controls
-      button#formhide Hide/Show Form
+      button.red#formhide Hide/Show Form
       .form
         label Add A New Recipe
         form(method='post', action='/recipes')
@@ -10,8 +10,19 @@ block content
           input(name='photo', type='text', placeholder='Photo URL')
           input(name='ingredients', type='text', placeholder='Ingredients')
           textarea(name='directions', placeholder='Directions')
-          button Add Recipe!
+          select(name='category')
+            option(value='Breakfast') Breakfast
+            option(value='Lunch') Lunch
+            option(value='Dinner') Dinner 
+            option(value='Dessert') Dessert 
+          button.blue Add Recipe!
     h2 Recipe Index
+    ul#categories
+      li#showAll: a(href='#') Show All
+      li: a(href='#') Breakfast
+      li: a(href='#') Lunch
+      li: a(href='#') Dinner
+      li: a(href='#') Dessert
     #recipes
       each recipe in recipes
         include recipe

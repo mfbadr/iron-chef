@@ -3,6 +3,7 @@
   "name":"Curry",
   "photo":"http://cuyus.org/wp-content/uploads/2014/01/curry.jpg",
   "ingredients":["chicken", "coconut milk", "peppers", "rice"],
+  "catagory":"Breakfast",
   "directions":"Throw everything into a big pot, simmer for like 6 hours."
 }
 
@@ -11,6 +12,7 @@
   "name":"Rum Ham",
   "photo":"http://www.blogcdn.com/wow.joystiq.com/media/2011/12/ah-rumham-12-19-11.jpg",
   "ingredients":["Rum", "Ham"],
+  "catagory":"Breakfast",
   "directions":"Soak the ham in the rum. Eat while beligerent."
 }
 {
@@ -18,6 +20,7 @@
   "name":"Hot Pockets",
   "photo":"http://scienceblogs.com/startswithabang/files/2009/05/hot_pocket.jpg",
   "ingredients":["Hot Pocket", "Microwave", "Sadness"],
+  "catagory":"Dinner",
   "directions":"Put hot pocket in microwave for 44 seconds. It should be molten on the outside and frozen on the inside. Consume in shame."
 }
 {
@@ -25,5 +28,6 @@
   "name":"Brownies",
   "photo":"http://www.sweetmuse.com/images/home_brownie.jpg",
   "ingredients":["brownie mix", "milk", "eggs"],
+  "catagory":"Lunch",
   "directions":"Just follow the directions on the box. It's really not that hard."
 }

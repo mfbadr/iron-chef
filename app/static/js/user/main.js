@@ -3,12 +3,37 @@
 
   $(document).ready(function(){
     $('#formhide').click(function(){
-      $('.form').toggle(1000);
+      $('.form').slideToggle(1000);
     });
 
     $('form').submit(addRecipe);
+    $('#recipes').on('click', '.delete', delRecipe);
 
+    $('#categories li').click(filterCategory);
+
+    $('#showAll').click(function(){$('.recipe').fadeIn()});
   });
+
+  function filterCategory(e){
+    //debugger;
+    var category = $(this).text();
+    $('.recipe .category:not(:contains('+category+'))').closest('.recipe').fadeOut()
+    $('.recipe .category:contains('+category+')').closest('.recipe').fadeIn()
+    e.preventDefault();
+  }
+  function delRecipe(){
+    var id   = $(this).parent().attr('data-recipe-id'),
+        type = 'delete',
+        url  = '/recipes/' + id;
+
+    $.ajax({url:url, type:type, dataType:'json', success:function(data){
+      console.log(data);
+      var $recipe = $('.recipe[data-recipe-id='+data.id+']');
+      $recipe.fadeOut(500);
+
+      setTimeout(function(){$recipe.remove();}, 505);
+    }});
+  }
 
   function addRecipe(e){
     var data = $('form').serialize(),
@@ -16,14 +41,15 @@
         url  = $('form').attr('action');
 
     $.ajax({url:url, type:type, data:data, dataType:'html', success:function(html){
-      console.log(html);
-      $('#recipes').append(html);
+      //console.log(html);
+      var $recipe = $(html).css('display', 'none'); //take the html, make it hidden, save it to a new var
+      $('#recipes').prepend($recipe); //add our new hidden html to the DOM
+      $recipe.fadeIn(2000); //fade it in
 
-    $('.form').toggle(1000);
-    $('.form input').val('');
-    $('.form textarea').val('');
+      $('.form input').val(''); //clear the form
+      $('.form textarea').val('');
+      $('.form').toggle(1000); //hide the form
     }});
-    //console.log(data, type, url);
     e.preventDefault();
   }
 })();

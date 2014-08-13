@@ -42,5 +42,15 @@ describe('Recipe', function(){
       });
     });
   });
+  describe('.deleteById', function(){
+    it('should delete a single recipe', function(done){
+      Recipe.deleteById('000000000000000000000001', function(){
+        Recipe.all(function(err, recipes){
+          expect(recipes).to.have.length(3);
+          done();
+        });
+      });
+    });
+  });
 });
 
