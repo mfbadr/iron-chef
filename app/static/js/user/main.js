@@ -14,7 +14,20 @@
     $('#showAll').click(function(){
       $('.recipe').show();
     });
+
+    $('.ingredient').click(filterIngredient);
+
   });
+
+  function filterIngredient(e){
+    //debugger;
+    var ingredient = $(this).text();
+    //$('.recipe .ingredient:contains('+ingredient+')').closest('.recipe').fadeOut();
+    //debugger;
+    $('.recipe ul:not(:contains('+ingredient+'))').closest('.recipe').fadeOut()
+    //$('.recipe .ingredient:not(:contains('+ingredient+'))').closest('.recipe').fadeOut();
+    //e.preventDefault();
+  }
 
   function filterCategory(e){
     //debugger;

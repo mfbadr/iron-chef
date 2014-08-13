@@ -6,5 +6,5 @@
     h4.category= recipe.category
     ul
       each ingredient in recipe.ingredients
-        li= ingredient
+        li.ingredient: a(href='#')= ingredient
     p #{recipe.directions}
