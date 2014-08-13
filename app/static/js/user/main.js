@@ -15,7 +15,8 @@
       $('.recipe').show();
     });
 
-    $('.ingredient').click(filterIngredient);
+    $('#recipes').on('click', '.ingredient', filterIngredient);
+    //$('.ingredient').click(filterIngredient);
 
   });
 
@@ -24,7 +25,8 @@
     var ingredient = $(this).text();
     //$('.recipe .ingredient:contains('+ingredient+')').closest('.recipe').fadeOut();
     //debugger;
-    $('.recipe ul:not(:contains('+ingredient+'))').closest('.recipe').fadeOut()
+    $('.recipe ul:not(:contains('+ingredient+'))').closest('.recipe').fadeOut();
+    $('.recipe ul:contains('+ingredient+')').closest('.recipe').fadeIn();
     //$('.recipe .ingredient:not(:contains('+ingredient+'))').closest('.recipe').fadeOut();
     //e.preventDefault();
   }
