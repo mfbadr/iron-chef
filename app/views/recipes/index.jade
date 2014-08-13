@@ -19,10 +19,10 @@ block content
     h2 Recipe Index
     ul#categories
       li#showAll: a(href='#') Show All
-      li: a(href='#') Breakfast
-      li: a(href='#') Lunch
-      li: a(href='#') Dinner
-      li: a(href='#') Dessert
+      li.cat: a(href='#') Breakfast
+      li.cat: a(href='#') Lunch
+      li.cat: a(href='#') Dinner
+      li.cat: a(href='#') Dessert
     #recipes
       each recipe in recipes
         include recipe

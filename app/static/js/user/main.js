@@ -9,7 +9,7 @@
     $('form').submit(addRecipe);
     $('#recipes').on('click', '.delete', delRecipe);
 
-    $('#categories li').click(filterCategory);
+    $('.cat').click(filterCategory);
 
     $('#showAll').click(function(){
       $('.recipe').show();
